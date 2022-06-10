@@ -8,8 +8,8 @@
 int main(void)
 {
 char lit, e, q;
-e= 'e';
-q='q';
+e = 'e';
+q ='q';
 
 for (lit = 'a'; lit <= 'z'; lit++)
 {
@@ -21,4 +21,4 @@ for (lit = 'a'; lit <= 'z'; lit++)
 	putchar(10);
 
 	return (0);
-} 
+}
