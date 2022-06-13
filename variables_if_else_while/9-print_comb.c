@@ -2,10 +2,10 @@
 #include<time.h>
 #include<stdio.h>
 
-/*
- * main-This is the main part of my program
+/**
+ * main - This is the main part of my program
  * Return: Always 0.
- */
+**/
 int main(void)
 {
 	int b;
