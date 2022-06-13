@@ -2,7 +2,7 @@
 
 /**
  * _islower - check the code
- * @c: variable 
+ * @c: variable
  *
  * Return: Always 0
  */
