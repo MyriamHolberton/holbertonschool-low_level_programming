@@ -2,14 +2,16 @@
 #include <stdio.h>
 
 /**
- * _mul -it is a function  .
- * @a, b: input
+ * mul -it is a function  .
+ * @a: input
+ * @b: input
  * Return: Always 0.
  */
 int mul(int a, int b)
 {
 	int give;
-	give = a*b;
+
+	give = a * b;
 	return (give);
 }
 
