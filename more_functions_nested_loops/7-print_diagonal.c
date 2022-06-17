@@ -2,11 +2,12 @@
 #include <stdio.h>
 
 /**
- * print_line - it is a function.
+ *print_diagonal - it is a function.
  * @n: input
+ * @d: input
  * Return: Always 0.
  */
-void print_line(int n)
+void print_diagonal(int n)
 {
 	int d;
 
