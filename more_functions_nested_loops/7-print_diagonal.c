@@ -4,19 +4,28 @@
 /**
  *print_diagonal - it is a function.
  * @n: input
- * @d: input
  * Return: Always 0.
  */
 void print_diagonal(int n)
 {
-	int d;
+	int a;
+	int b;
 
-		if (n > 0)
+	if (n > 0)
+	{
+		for (a = 0; a <= n; a++)
 		{
-			for (d = 1; d <= n; d++)
+			for (b = 0; b <= a; b++)
 			{
-				_putchar('_');
+				_putchar(' ');
 			}
+			_putchar('\\');
+			_putchar('\n');
+
 		}
-	_putchar('\n');
+	}
+	else
+	{
+		_putchar('\n');
+	}
 }
