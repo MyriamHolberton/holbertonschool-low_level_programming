@@ -3,7 +3,7 @@
 
 /**
  * reset_to_98 - check the code
- * @n
+ * @n: input
  */
 void reset_to_98(int *n)
 {
