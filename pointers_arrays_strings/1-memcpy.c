@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * __memcpy - prints buffer in hexa
+ * *__memcpy - The main function
  * @dest: input
  * @src: input
  * @n: input
