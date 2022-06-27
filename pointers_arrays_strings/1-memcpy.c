@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * *__memcpy - The main function
+ * _memcpy - The main function
  * @dest: input
  * @src: input
  * @n: input
