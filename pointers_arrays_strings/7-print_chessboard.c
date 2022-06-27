@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _strstr - The main function
+ * print_chessboard - The main function
  * @a: input
  *
  * Return: Always 0.
