@@ -6,7 +6,7 @@
  * @s: input
  * @accept: input
  *
- * Return: Always (Success)
+ * Return: Always 0.
  */
 
 unsigned int _strspn(char *s, char *accept)
@@ -23,5 +23,5 @@ unsigned int _strspn(char *s, char *accept)
 		if (!accept[l])
 			break;
 	}
-	return (l);
+	return (i);
 }
