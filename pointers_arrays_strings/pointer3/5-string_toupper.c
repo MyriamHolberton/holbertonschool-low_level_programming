@@ -3,24 +3,19 @@
 
 /**
  * string_toupper - it is the main function
- * @char: input
- * @str: The string to be changed
+ * @ptr: input
  *
  * Return: A pointer to the changed string.
  */
-char *string_toupper(char *)
+char *string_toupper(char *ptr)
 {
-	int x;
-	int str;
+	int i;
 
-	for (x = 0; str[x] != '\0'; x++)
+	for (i = 0; ptr[i] != '\0'; ++i)
 	{
-		if ((str[x] >= 'a') && (str[x] <= 'z'))
-
-			str[x] = str[x] - 'a' + 'A';
-
+		if (ptr[i] >= 'a' && ptr[i] <= 'z')
+			ptr[i] = ptr[i] - 32;
 	}
-
-	return (str);
+	return (ptr);
 }
 
