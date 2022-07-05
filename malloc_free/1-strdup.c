@@ -16,6 +16,8 @@ char *_strdup(char *str)
 	int n, i;
 
 	n = 0;
+	if (str == NULL)
+		return (NULL);
 
 	while (str[n] != '\0')
 	{
@@ -23,6 +25,9 @@ char *_strdup(char *str)
 	}
 
 	duplicates = malloc(sizeof(char) * (n + 1));
+	if (duplicates == NULL)
+		return (NULL);
+
 	for (i = 0; i < n; i++)
 		duplicates[i] = str[i];
 	duplicates[i] = '\0';
