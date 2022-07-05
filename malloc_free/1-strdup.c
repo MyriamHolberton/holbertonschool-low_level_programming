@@ -3,30 +3,29 @@
 #include <stdlib.h>
 
 /**
- * create_array - Create an array of char.
- *.
- * @size: The size of the array to be initialized.
- * @c: The specific char to initialize the array with.
- *
- * Return: If size == 0 or the function fails - NULL.  
+ * _strdup - The main function
+ * @str: input
+ * Description: a function that returns a pointer to a
+ * newly allocated space in memory
+ * Return: Always duplicates
  */
-char *create_array(unsigned int size, char c)
+
+char *_strdup(char *str)
 {
-	unsigned int i;
-	char *n;
+	char *duplicates;
+	int n, i;
 
-	if (size == 0)
-		return (NULL);
+	n = 0;
 
-	n = malloc(size * sizeof(char));
-
-	if (n == NULL)
-
-		return (NULL);
-
-	for (i = 0; i < size; size++)
+	while (str[n] != '\0')
 	{
-		n[i] = c;
+		n++;
 	}
-	return (n);
+
+	duplicates = malloc(sizeof(char) * (n + 1));
+	for (i = 0; i < n; i++)
+		duplicates[i] = str[i];
+	duplicates[i] = '\0';
+
+	return (duplicates);
 }
