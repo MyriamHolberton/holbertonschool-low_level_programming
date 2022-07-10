@@ -3,30 +3,22 @@
 #include <stdlib.h>
 
 /**
- * create_array - Create an array of char.
- *.
- * @size: The size of the array to be initialized.
- * @c: The specific char to initialize the array with.
+ * free_grid - Free a 2D grid
+ * @grid: input.
+ * @height: input.
  *
- * Return: If size == 0 or the function fails - NULL.  
+ * Return: Always 0.
  */
-char *create_array(unsigned int size, char c)
+
+void free_grid(int **grid, int height)
 {
-	unsigned int i;
-	char *n;
+	int x;
 
-	if (size == 0)
-		return (NULL);
-
-	n = malloc(size * sizeof(char));
-
-	if (n == NULL)
-
-		return (NULL);
-
-	for (i = 0; i < size; size++)
+	if (grid == NULL || height == 0)
+		return;
+	for (x = 0; x < height; x++)
 	{
-		n[i] = c;
+		free(grid[x]);
 	}
-	return (n);
+	free(grid);
 }
