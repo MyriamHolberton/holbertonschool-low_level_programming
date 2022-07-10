@@ -3,30 +3,42 @@
 #include <stdlib.h>
 
 /**
- * create_array - Create an array of char.
- *.
- * @size: The size of the array to be initialized.
- * @c: The specific char to initialize the array with.
+ * alloc_grid - Return a pointer to a 2D array of integers
+ * @width: input.
+ * @height: input.
  *
- * Return: If size == 0 or the function fails - NULL.  
+ * Return: Always 0.
  */
-char *create_array(unsigned int size, char c)
+
+int **alloc_grid(int width, int height)
 {
-	unsigned int i;
-	char *n;
+	int **twoD, x, y;
 
-	if (size == 0)
+	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	n = malloc(size * sizeof(char));
-
-	if (n == NULL)
-
+	twoD = malloc(sizeof(int *) * height);
+	if (twoD == NULL)
 		return (NULL);
-
-	for (i = 0; i < size; size++)
+	for (x = 0; x < height; x++)
 	{
-		n[i] = c;
+		twoD[x] = malloc(sizeof(int) * width);
+		if (twoD[x] == NULL)
+		{
+			for (; x >= 0; x--)
+			{
+				free(twoD[x]);
+			}
+			free(twoD);
+			return (NULL);
+		}
 	}
-	return (n);
+	for (x = 0; x < height; x++)
+	{
+		for (y = 0; y < width; y++)
+			twoD[x][y] = 0;
+	}
+	return (twoD);
 }
+
+
