@@ -3,30 +3,36 @@
 #include <stdlib.h>
 
 /**
- * create_array - Create an array of char.
- *.
- * @size: The size of the array to be initialized.
- * @c: The specific char to initialize the array with.
+ * str_concat - This function concatenates two strings.
+ * @s1: input.
+ * @s2: input.
  *
- * Return: If size == 0 or the function fails - NULL.  
+ * Return: Always 0.
  */
-char *create_array(unsigned int size, char c)
+
+char *str_concat(char *s1, char *s2)
 {
-	unsigned int i;
-	char *n;
+	int i, j, size;
+	char *a;
 
-	if (size == 0)
+	for (i = 0; s1[i] != '\0'; i++)
+		;
+	for (j = 0; s2[j] != '\0'; j++)
+		;
+	size = i + j + 1;
+	a = malloc(sizeof(char) * size);
+	if (a == 0)
 		return (NULL);
-
-	n = malloc(size * sizeof(char));
-
-	if (n == NULL)
-
-		return (NULL);
-
-	for (i = 0; i < size; size++)
+	for (i = 0; s1[i] != '\0'; i++)
 	{
-		n[i] = c;
+		*(a + i) = *(s1 + i);
 	}
-	return (n);
+	for (j = 0; s2[j] != '\0'; j++)
+	{
+		*(a + i + j) = *(s2 + j);
+	}
+
+	return (a);
 }
+
+
