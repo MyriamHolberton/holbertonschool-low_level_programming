@@ -1,1 +1,1 @@
-Premier readme du langage C
+langage C variable if else while
