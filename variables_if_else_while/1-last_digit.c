@@ -3,11 +3,11 @@
 #include <time.h>
 
 /**
- * Main - Fonction principale
+ * main - Function that prints a text according to the number
  *
- * Exercice sur les conditions
- * Return: Retourne un zero
+ * Return: Return always succes
  */
+
 int main(void)
 {
 	int n;
