@@ -3,9 +3,9 @@
 #include <time.h>
 
 /**
- * Main - main function
+ * Main - Prints the alphabet in lowercase, except for e and q
  *
- * Return: always a SUCCESS value 0
+ * Return: Always 0
  */
 
 int main(void)
