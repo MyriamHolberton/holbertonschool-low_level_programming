@@ -16,7 +16,7 @@ int len = 10;
 int tmp = 0;
 int j = 0;
 
-for (i = len-2, j = 0; i >= len / 2; i--, j++)
+for (i = len-1, j = 0; i >= len / 2; i--, j++)
 {
 	tmp = s[j];
 	s[j] = s[i];
