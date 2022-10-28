@@ -15,35 +15,25 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i = 0, j = 0, k = 0, l = 0;
-	char *str;
+	unsigned int len = n, index;
+	char *cont;
 
 	if (s1 == NULL)
 	s1 = "";
 	if (s2 == NULL)
 	s2 = "";
 
-	while (s1[i])
-	i++;
-	while (s2[k])
-	k++;
+	for (index = 0; s1[index]; index++)
+	len++;
 
-	if (n >= k)
-	l = i + k;
-	else
-	l = i + n;
+	cont = malloc(sizeof(char) * (len + 1));
 
-	str = malloc(sizeof(char) * l + 1);
-	if (str == NULL)
+	if (cont == NULL)
 	return (NULL);
+	len = 0;
 
-	if (j <= i)
-	str[j] = s1[j];
-	if (j >= i)
-	str[j] = s2[k];
-	k++;
-	j++;
-
-str[j] = '\0';
-return (str);
+	for (index = 0; s1[index]; index++)
+	cont[len++] = s2[index];
+	cont[len] = '\0';
+	return (cont);
 }
