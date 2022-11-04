@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-#include "function_pointers.h"
+#include "variadic_functions.h"
+#include <stdarg.h>
 
 /**
 * sum_them_all - returns the sum of all its parameters
@@ -9,17 +10,26 @@
 * 
 * @action: a pointer to a function
 *
-* Return: nothing
+* Return: if n == 0
 */
 
 int sum_them_all(const unsigned int n, ...)
 {
-	if (array == NULL || action == NULL)
-	return;
 
-	while (size-- > 0)
-	{
-	action(*array);
-	array++;
-	}
+va_list nums;
+unsigned int i = 0;
+int sum = 0;
+
+if (n != 0)
+{
+va_start(nums, n);
+while (i < n)
+{
+	sum += va_num(nums, int);
+	i++;
+}
+va_end(nums);
+return (sum);
+}
+return (0);
 }
