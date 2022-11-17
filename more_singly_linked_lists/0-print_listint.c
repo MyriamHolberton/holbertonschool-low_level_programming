@@ -19,6 +19,7 @@ while (h)
 {
 	nodes++;
 	h = h->next;
+	printf("%d\n", h->n);
 }
 return (nodes);
 }
