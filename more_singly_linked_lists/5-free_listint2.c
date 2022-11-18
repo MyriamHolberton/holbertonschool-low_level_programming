@@ -13,21 +13,18 @@
 
 void free_listint2(listint_t **head)
 {
-listint_t *tmp;
+	listint_t *tmp;
 
-if (head)
-{
-if (*head)
-{
-	tmp = (*head);
-	*head = (*head)->next;
-	free(tmp);
-}
-else
-{
-return;
-}
-free(*head);
-head = 0;
-}
+	if (head)
+	{
+		while (*head)
+		{
+			tmp = (*head);
+			*head = (*head)->next;
+			free(tmp);
+		}
+
+		free(*head);
+		head = NULL;
+	}
 }
