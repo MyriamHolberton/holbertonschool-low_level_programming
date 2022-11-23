@@ -1,5 +1,10 @@
 #ifndef HEADER_H
 #define HEADER_H
+
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
